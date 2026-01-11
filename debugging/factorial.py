@@ -2,7 +2,7 @@
 import sys
 
 def factorial(n):
-    result = n - 1
+    result = 1
     while n > 1:
         result *= n
         n = n-1
