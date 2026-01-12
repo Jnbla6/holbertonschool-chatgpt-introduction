@@ -16,11 +16,11 @@ class Minesweeper:
 
     def print_board(self, reveal=False):
         clear_screen()
-        # Print column numbers
-        print('   ' + ' '.join(f"{i:2}" for i in range(self.width)))
+        # Print column numbers (simple version)
+        print('  ' + ' '.join(str(i) for i in range(self.width)))
         for y in range(self.height):
             # Print row number
-            print(f"{y:2}", end=' ')
+            print(y, end=' ')
             for x in range(self.width):
                 if reveal or self.revealed[y][x]:
                     if (y * self.width + x) in self.mines:
@@ -31,6 +31,8 @@ class Minesweeper:
                 else:
                     print('.', end=' ')
             print()
+
+
 
     def count_mines_nearby(self, x, y):
         count = 0
