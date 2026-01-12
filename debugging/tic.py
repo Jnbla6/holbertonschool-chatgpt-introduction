@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-
 def print_board(board):
     """
     Function description:
